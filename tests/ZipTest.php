@@ -1,11 +1,9 @@
 <?php
 
 
-namespace ZanySoft\Zip\Tests;
+namespace Happones\Zip\Tests;
 
-
-use Orchestra\Testbench\TestCase;
-use ZanySoft\Zip\Facades\Zip;
+use Happones\Zip\Facades\Zip;
 
 class ZipTest extends TestCase
 {

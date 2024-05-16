@@ -1,5 +1,6 @@
 {
-  "name": "zanysoft/laravel-zip",
+  "name": "happones/laravel-zip",
+  "version": "11.0.0",
   "description": "laravel-zip is the world's leading zip utility for file compression and backup.",
   "license": "MIT",
   "homepage": "http://www.zanysoft.net",
@@ -8,6 +9,11 @@
       "name": "Zany Soft",
       "email": "info@zanysoft.net",
       "homepage": "http://www.zanysoft.net"
+    },
+    {
+      "name": "Omar Hernandez",
+      "email": "happones@kuantal.com",
+      "homepage": "https://kuatal.com"
     }
   ],
   "keywords": [
@@ -15,6 +21,8 @@
     "laravel",
     "laravel8",
     "laravel9",
+    "laravel10",
+    "laravel11",
     "zip",
     "unzip",
     "extract",
@@ -25,7 +33,7 @@
   ],
   "require": {
     "php": ">=7.4",
-    "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
+    "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
     "ext-zip": "*"
   },
   "require-dev": {
@@ -35,21 +43,21 @@
   },
   "autoload": {
     "psr-4": {
-      "ZanySoft\\Zip\\": "src"
+      "Happones\\Zip\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ZanySoft\\Zip\\": "tests"
+      "Happones\\Zip\\Tests\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "ZanySoft\\Zip\\ZipServiceProvider"
+        "Happones\\Zip\\ZipServiceProvider"
       ],
       "aliases": {
-        "Zip": "ZanySoft\\Zip\\Facades\\Zip"
+        "Zip": "Happones\\Zip\\Facades\\Zip"
       }
     }
   }

@@ -1,19 +1,12 @@
 <?php
 
-namespace ZanySoft\Zip;
+namespace Happones\Zip;
 
 use Exception;
 use Illuminate\Support\Str;
 use ZipArchive;
 
 /**
- * ZanySoft\Zip - ZipArchive toolbox
- *
- * This class provide methods to handle single zip archive
- *
- * @package     ZanySoft\Zip
- * @author      ZanySoft <info@zanysoft.co>
- * @license     MIT
  *
  */
 class Zip
@@ -105,6 +98,7 @@ class Zip
      *
      * @param string $zip_file ZIP file name
      *
+     * @throws Exception
      */
     public function __construct($zip_file = null)
     {
@@ -119,6 +113,7 @@ class Zip
      * @param string $zip_file ZIP file name
      *
      * @return  Zip
+     * @throws Exception
      */
     public function open(string $zip_file)
     {
@@ -158,6 +153,7 @@ class Zip
      * @param bool $overwrite overwrite existing file (if any)
      *
      * @return  Zip
+     * @throws Exception
      */
     public function create(string $zip_file, bool $overwrite = false)
     {
@@ -190,6 +186,7 @@ class Zip
      * @param string $mode [HIDDEN, ZANYSOFT, ALL, NONE]
      *
      * @return  Zip
+     * @throws Exception
      */
     final public function setSkipped($mode)
     {
@@ -244,6 +241,7 @@ class Zip
      * @param string $path
      *
      * @return  Zip
+     * @throws Exception
      */
     public function setPath(string $path)
     {
@@ -346,6 +344,7 @@ class Zip
      * Get a list of files in archive (array)
      *
      * @return  array
+     * @throws Exception
      */
     public function listFiles()
     {
@@ -371,6 +370,7 @@ class Zip
      * @param int $flags (optional) ZipArchive::FL_NOCASE, ZipArchive::FL_NODIR seperated by bitwise OR
      *
      * @return  bool
+     * @throws Exception
      */
     public function has($file, $flags = 0)
     {
@@ -388,6 +388,7 @@ class Zip
      * @param mixed $files (optional) a filename or an array of filenames
      *
      * @return  bool
+     * @throws Exception
      */
     public function extract($destination, $files = null)
     {
@@ -449,6 +450,7 @@ class Zip
      * @param bool $flatroot in case of directory, specify if root folder should be flatten or not
      *
      * @return  Zip
+     * @throws Exception
      */
     public function add($file_path, $flatroot = false)
     {
@@ -483,6 +485,7 @@ class Zip
      * @param mixed $filename filename to delete or an array of filenames
      *
      * @return  Zip
+     * @throws Exception
      */
     public function delete($filename)
     {
@@ -509,6 +512,7 @@ class Zip
      * Close the zip archive
      *
      * @return  bool
+     * @throws Exception
      */
     public function close()
     {
@@ -628,6 +632,7 @@ class Zip
      *
      * @param string $file File to delete (zippath)
      *
+     * @throws Exception
      */
     private function deleteItem($file)
     {
@@ -645,6 +650,7 @@ class Zip
      * @param int $flags ZIP status code
      *
      * @return  \ZipArchive
+     * @throws Exception
      */
     private static function openZipFile($zip_file, $flags = null)
     {
