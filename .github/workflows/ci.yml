@@ -19,5 +19,5 @@ jobs:
           php_extensions: "zip"
           version: 9.6
           bootstrap: vendor/autoload.php
-          configuration: test/phpunit.xml
+          configuration: ./phpunit.xml
           args: --coverage-text
